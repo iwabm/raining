@@ -1,0 +1,178 @@
+.videobg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+}
+
+.container {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+  font-family: 'Nothing You Could Do','Pacifico','Cedarville Cursive','Over the Rainbow', cursive;
+	background: rgba(51, 51, 70, 0.6);
+}
+
+.contents {
+  width: 720px;
+  height: 90vh;
+  position: relative;
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+#info {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+#loading_text {
+  display: none;
+}
+
+#about {
+  display: none;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 2rem;
+  text-align: center;
+  color: rgba(225,225,225,0.9);
+}
+
+a {
+  color: rgba(175,175,225,0.9);
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: rgba(205,205,205,0.75);
+}
+
+span {
+  font-size: 2rem;
+  text-align: center;
+  color: rgba(225,225,225,0.9);
+}
+
+#loader {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  width: 75px;
+}
+
+#btn-real {
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(152, 152, 152, 0.43);/*アイコン色*/
+  width: 90px;
+  height: 90px;
+  /* line-height: 80px; */
+  /* padding-right: 1px; */
+  font-size: 50px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: solid 2px #b5b5b5;
+  outline: none;
+}
+#btn-real i {
+  line-height: 80px;
+}
+#btn-real:hover {
+  color: rgba(52, 52, 202, 0.7);
+}
+#btn-real:active {
+  color: rgba(52, 52, 252, 0.95);
+  background-image: linear-gradient(#cccccc 0%, #bbbbbb 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: none;
+}
+
+#btn-about {
+  position: absolute;
+  top:50px;
+  /* left:0; */
+  right:30px;
+  margin:auto;
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(152, 152, 152, 0.43);/*アイコン色*/
+  width: 45px;
+  height: 45px;
+  /* line-height: 45px; */
+  font-size: 24px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: linear-gradient(#999999 0%, #888888 100%);
+  text-shadow: 1px 1px 1px rgba(215, 215, 215, 0.66);
+  box-shadow: inset 0 2px 0 rgba(155,155,155,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: solid 2px #999999;
+}
+#btn-about i {
+  line-height: 45px;
+}
+#btn-about:hover {
+  color: rgba(252, 52, 52, 0.7);/*アイコン色*/
+}
+#btn-about:active {
+  color: rgba(252, 52, 52, 0.95);/*アイコン色*/
+  background-image: linear-gradient(#cccccc 0%, #bbbbbb 100%);
+  box-shadow: inset 0 1px 0 rgba(155,155,155,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: none;
+}
+
+#btn-sound {
+  position: absolute;
+  top:110px;
+  /* left:0; */
+  right:30px;
+  margin:auto;
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(152, 152, 152, 0.43);/*アイコン色*/
+  width: 45px;
+  height: 45px;
+  /* line-height: 60px; */
+  font-size: 24px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: linear-gradient(#999999 0%, #888888 100%);
+  text-shadow: 1px 1px 1px rgba(215, 215, 215, 0.66);
+  box-shadow: inset 0 2px 0 rgba(155,155,155,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: solid 2px #999999;
+}
+#btn-sound i {
+  line-height: 45px;
+}
+#btn-sound:hover {
+  color: rgba(52, 252, 52, 0.7);/*アイコン色*/
+}
+#btn-sound:active {
+  color: rgba(52, 252, 52, 0.95);/*アイコン色*/
+  background-image: linear-gradient(#cccccc 0%, #bbbbbb 100%);
+  box-shadow: inset 0 1px 0 rgba(155,155,155,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: none;
+}
