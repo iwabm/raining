@@ -83,7 +83,7 @@ function search(){
     console.log(random_city)
     var html = '<span>' + random_city + '</span>'
     document.getElementById("info").innerHTML = html;
-    cityURL = "https://geodb-free-service.wirefreethought.com/v1/geo/cities?limit=5&offset=0&namePrefix="+ random_city;
+    cityURL = "http://geodb-free-service.wirefreethought.com/v1/geo/cities?limit=5&offset=0&namePrefix="+ random_city;
     return getParam(cityURL)
   })
   .then(res => {
