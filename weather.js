@@ -2,8 +2,8 @@ var zone, city,country,song,video;
 var weatherURL,cityURL,songURL,youtubeURL;
 
 var lon = getRandomInt2(-180, 120);
-var lon2 = lon+25;
-zone = lon+',25,'+lon2+',50,10'
+var lon2 = lon+24;
+zone = lon+',26,'+lon2+',50,10'
 weatherURL = 'http://api.openweathermap.org/data/2.5/box/city?bbox=' + zone + '&appid=f6748bf5cbca6df7965ee552869cc300';
 // $.fakeLoader();
 
