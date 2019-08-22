@@ -4,7 +4,7 @@ var weatherURL,cityURL,songURL,youtubeURL;
 var lon = getRandomInt2(-180, 120);
 var lon2 = lon+5;
 zone = lon+',35,'+lon2+',40,10'
-weatherURL = 'http://api.openweathermap.org/data/2.5/box/city?bbox=' + zone + '&appid=f6748bf5cbca6df7965ee552869cc300';
+weatherURL = 'https://api.openweathermap.org/data/2.5/box/city?bbox=' + zone + '&appid=f6748bf5cbca6df7965ee552869cc300';
 // $.fakeLoader();
 
 const getParam = url => {
