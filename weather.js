@@ -109,7 +109,7 @@ function search(){
     var html = '<span>, ' + country + ' is raining now.</span>'
     document.getElementById("info").insertAdjacentHTML('beforeend', html);
 
-    songURL = "https://ws.audioscrobbler.com/2.0/?method=geo.getTopTracks&country="+country+"&api_key=f9cb39ef274c20dc022d3c7f20a708a8&format=json&limit=10";
+    songURL = "http://ws.audioscrobbler.com/2.0/?method=geo.getTopTracks&country="+country+"&api_key=f9cb39ef274c20dc022d3c7f20a708a8&format=json&limit=10";
     console.log(country)
     return getParam(songURL)
   })
