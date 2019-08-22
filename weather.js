@@ -4,7 +4,7 @@ var weatherURL,cityURL,songURL,youtubeURL;
 var lon = getRandomInt2(-180, 120);
 var lon2 = lon+5;
 zone = lon+',35,'+lon2+',40,10'
-weatherURL = 'https://api.openweathermap.org/data/2.5/box/city?bbox=' + zone + '&appid=f6748bf5cbca6df7965ee552869cc300';
+weatherURL = 'http://api.openweathermap.org/data/2.5/box/city?bbox=' + zone + '&appid=f6748bf5cbca6df7965ee552869cc300';
 // $.fakeLoader();
 
 const getParam = url => {
@@ -27,7 +27,7 @@ const getParam = url => {
 const playyoutube = video => {
   return new Promise((resolve, reject) => {
     console.log(video)
-    var url = '<iframe id="ytplayer" width="560" height="315" src="https://www.youtube.com/embed/' + video + '" frameborder="0" allow="autoplay;picture-in-picture" allowfullscreen></iframe>'
+    var url = '<iframe id="ytplayer" width="560" height="315" src="http://www.youtube.com/embed/' + video + '" frameborder="0" allow="autoplay;picture-in-picture" allowfullscreen></iframe>'
   // console.log(url)
     document.getElementById("player").innerHTML = url;
     if(video != null){
@@ -83,7 +83,7 @@ function search(){
     console.log(random_city)
     var html = '<span>' + random_city + '</span>'
     document.getElementById("info").innerHTML = html;
-    cityURL = "https://geodb-free-service.wirefreethought.com/v1/geo/cities?limit=5&offset=0&namePrefix="+ random_city;
+    cityURL = "http://geodb-free-service.wirefreethought.com/v1/geo/cities?limit=5&offset=0&namePrefix="+ random_city;
     return getParam(cityURL)
   })
   .then(res => {
