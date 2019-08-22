@@ -27,7 +27,7 @@ const getParam = url => {
 const playyoutube = video => {
   return new Promise((resolve, reject) => {
     console.log(video)
-    var url = '<iframe id="ytplayer" width="560" height="315" src="http://www.youtube.com/embed/' + video + '" frameborder="0" allow="autoplay;picture-in-picture" allowfullscreen></iframe>'
+    var url = '<iframe id="ytplayer" width="560" height="315" src="https://www.youtube.com/embed/' + video + '" frameborder="0" allow="autoplay;picture-in-picture" allowfullscreen></iframe>'
   // console.log(url)
     document.getElementById("player").innerHTML = url;
     if(video != null){
@@ -83,7 +83,7 @@ function search(){
     console.log(random_city)
     var html = '<span>' + random_city + '</span>'
     document.getElementById("info").innerHTML = html;
-    cityURL = "http://geodb-free-service.wirefreethought.com/v1/geo/cities?limit=5&offset=0&namePrefix="+ random_city;
+    cityURL = "https://geodb-free-service.wirefreethought.com/v1/geo/cities?limit=5&offset=0&namePrefix="+ random_city;
     return getParam(cityURL)
   })
   .then(res => {
@@ -109,7 +109,7 @@ function search(){
     var html = '<span>, ' + country + ' is raining now.</span>'
     document.getElementById("info").insertAdjacentHTML('beforeend', html);
 
-    songURL = "http://ws.audioscrobbler.com/2.0/?method=geo.getTopTracks&country="+country+"&api_key=f9cb39ef274c20dc022d3c7f20a708a8&format=json&limit=10";
+    songURL = "https://ws.audioscrobbler.com/2.0/?method=geo.getTopTracks&country="+country+"&api_key=f9cb39ef274c20dc022d3c7f20a708a8&format=json&limit=10";
     console.log(country)
     return getParam(songURL)
   })
