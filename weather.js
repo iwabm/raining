@@ -46,7 +46,7 @@ const getParam_rapid = url => {
 const playyoutube = video => {
   return new Promise((resolve, reject) => {
     console.log(video)
-    var url = '<iframe id="ytplayer" width="560" height="315" src="http://www.youtube.com/embed/' + video + '" frameborder="0" allow="autoplay;picture-in-picture" allowfullscreen></iframe>'
+    var url = '<iframe id="ytplayer" width="560" height="315" src="https://www.youtube.com/embed/' + video + '" frameborder="0" allow="autoplay;picture-in-picture" allowfullscreen></iframe>'
   // console.log(url)
     document.getElementById("player").innerHTML = url;
     if(video != null){
