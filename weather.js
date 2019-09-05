@@ -142,6 +142,15 @@ function search(){
     }
     return getParam(weatherURL[4]);
   })  
+  .then(res => {
+    // console.log(res)
+    for(var i=0;i<res.list.length;i++){
+      weather[i] = res.list[i].weather[0].main;
+      if(weather[i]=="Rain"){
+        city[j] = res.list[i].name;
+        j++;
+      }
+    }
     random_city = city[getRandomInt(city.length)]
     console.log(j)
     console.log(random_city)
