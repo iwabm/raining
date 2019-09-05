@@ -15,7 +15,7 @@ zone[7] = '-105,25,-100,30,10';
 zone[8] = '10,60,15,65,10';
 zone[9] = '105,10,110,15,10';
 var weatherURL = [];
-for(var i=0;i<10;i++){
+for(var i=0;i<=9;i++){
   weatherURL[i] = 'https://api.openweathermap.org/data/2.5/box/city?bbox=' + zone[i] + '&appid=f6748bf5cbca6df7965ee552869cc300';
 }
 // $.fakeLoader();
@@ -104,7 +104,7 @@ function search(){
 
   getParam(weatherURL[0])
   .then(res => {
-    // console.log(res)
+    console.log(res)
     for(var i=0;i<res.list.length;i++){
       weather[i] = res.list[i].weather[0].main;
       if(weather[i]=="Rain"){
@@ -115,7 +115,7 @@ function search(){
     return getParam(weatherURL[1]);
   })
   .then(res => {
-     console.log(res)
+     //console.log(res)
     for(var i=0;i<res.list.length;i++){
       weather[i] = res.list[i].weather[0].main;
       if(weather[i]=="Rain"){
@@ -158,50 +158,7 @@ function search(){
     }
     return getParam(weatherURL[5]);
   })
-  .then(res => {
-    // console.log(res)
-    for(var i=0;i<res.list.length;i++){
-      weather[i] = res.list[i].weather[0].main;
-      if(weather[i]=="Rain"){
-        city[j] = res.list[i].name;
-        j++;
-      }
-    }
-    return getParam(weatherURL[6]);
-  }) 
-  .then(res => {
-     console.log(res)
-    for(var i=0;i<res.list.length;i++){
-      weather[i] = res.list[i].weather[0].main;
-      if(weather[i]=="Rain"){
-        city[j] = res.list[i].name;
-        j++;
-      }
-    }
-    return getParam(weatherURL[7]);
-  }) 
-  .then(res => {
-    // console.log(res)
-    for(var i=0;i<res.list.length;i++){
-      weather[i] = res.list[i].weather[0].main;
-      if(weather[i]=="Rain"){
-        city[j] = res.list[i].name;
-        j++;
-      }
-    }
-    return getParam(weatherURL[8]);
-  })
-  .then(res => {
-    // console.log(res)
-    for(var i=0;i<res.list.length;i++){
-      weather[i] = res.list[i].weather[0].main;
-      if(weather[i]=="Rain"){
-        city[j] = res.list[i].name;
-        j++;
-      }
-    }
-    return getParam(weatherURL[9]);
-  })  
+ 
   .then(res => {
     // console.log(res)
     for(var i=0;i<res.list.length;i++){
