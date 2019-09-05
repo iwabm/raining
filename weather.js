@@ -24,6 +24,25 @@ const getParam = url => {
   })
 };
 
+const getParam_rapid = url => {
+  return new Promise((resolve, reject) => {
+    const req = new XMLHttpRequest()
+    req.responseType = 'json'
+    req.open('GET', url, true)
+    req.setRequestHeader('Accept', 'application/json')
+    req.setRequestHeader("x-rapidapi-host", "wft-geo-db.p.rapidapi.com");
+    req.setRequestHeader("x-rapidapi-key", "814e9685dfmsh2f877b6c5f6d685p147c1cjsn947a00fc217d");
+    req.addEventListener('load', (e) => {
+      if (req.status === 200) {
+        resolve(req.response)
+      } else {
+        reject(req.statusText)
+      }
+    })
+    req.send()
+  })
+};
+
 const playyoutube = video => {
   return new Promise((resolve, reject) => {
     console.log(video)
@@ -83,8 +102,8 @@ function search(){
     console.log(random_city)
     var html = '<span>' + random_city + '</span>'
     document.getElementById("info").innerHTML = html;
-    cityURL = "https://wft-geo-db.p.mashape.com/v1/geo/cities?limit=5&offset=0&namePrefix="+ random_city + "&apikey=814e9685dfmsh2f877b6c5f6d685p147c1cjsn947a00";
-    return getParam(cityURL)
+    cityURL = "https://wft-geo-db.p.mashape.com/v1/geo/cities?limit=5&offset=0&namePrefix="+ random_city;
+    return getParam_rapid(cityURL)
   })
   .then(res => {
     // console.log(res)
