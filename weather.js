@@ -1,10 +1,18 @@
 var zone, city,country,song,video;
 var weatherURL,cityURL,songURL,youtubeURL;
 
-var lon = getRandomInt2(15, 120);
-var lon2 = lon+5;
-zone = lon+',35,'+lon2+',40,10'
-weatherURL = 'https://api.openweathermap.org/data/2.5/box/city?bbox=' + zone + '&appid=f6748bf5cbca6df7965ee552869cc300';
+//var lon = getRandomInt2(15, 120);
+//var lon2 = lon+5;  [lon-left,lat-bottom,lon-right,lat-top,zoom]
+var zone = [];
+zone[0] = '0,45,5,50,10';
+zone[1] = '40,25,45,30,10';
+zone[2] = '90,30,95,35,10';
+zone[3] = '-90,35,-85,40,10';
+zone[4] = '-75,0,-70,5,10';
+var weatherURL = [];
+for(var i=0;i<5;i++){
+  weatherURL[i] = 'https://api.openweathermap.org/data/2.5/box/city?bbox=' + zone[i] + '&appid=f6748bf5cbca6df7965ee552869cc300';
+}
 // $.fakeLoader();
 
 const getParam = url => {
@@ -84,13 +92,14 @@ function search(){
     });
   });
 
-  getParam(weatherURL)
+  var weather = [];
+  var city = [];
+  var random_city;
+  var j = 0;  
+
+  getParam(weatherURL[0])
   .then(res => {
     // console.log(res)
-    var weather = [];
-    var city = [];
-    var random_city;
-    var j = 0;
     for(var i=0;i<res.list.length;i++){
       weather[i] = res.list[i].weather[0].main;
       if(weather[i]=="Rain"){
@@ -98,7 +107,43 @@ function search(){
         j++;
       }
     }
+    return getParam(weatherURL[1]);
+  })
+  .then(res => {
+    // console.log(res)
+    for(var i=0;i<res.list.length;i++){
+      weather[i] = res.list[i].weather[0].main;
+      if(weather[i]=="Rain"){
+        city[j] = res.list[i].name;
+        j++;
+      }
+    }
+    return getParam(weatherURL[2]);
+  })
+  .then(res => {
+    // console.log(res)
+    for(var i=0;i<res.list.length;i++){
+      weather[i] = res.list[i].weather[0].main;
+      if(weather[i]=="Rain"){
+        city[j] = res.list[i].name;
+        j++;
+      }
+    }
+    return getParam(weatherURL[3]);
+  })
+  .then(res => {
+    // console.log(res)
+    for(var i=0;i<res.list.length;i++){
+      weather[i] = res.list[i].weather[0].main;
+      if(weather[i]=="Rain"){
+        city[j] = res.list[i].name;
+        j++;
+      }
+    }
+    return getParam(weatherURL[4]);
+  })  
     random_city = city[getRandomInt(city.length)]
+    console.log(j)
     console.log(random_city)
     var html = '<span>' + random_city + '</span>'
     document.getElementById("info").innerHTML = html;
