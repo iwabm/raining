@@ -156,7 +156,7 @@ function search(){
     console.log(random_city)
     var html = '<span>' + random_city + '</span>'
     document.getElementById("info").innerHTML = html;
-    cityURL = "https://wft-geo-db.p.mashape.com/v1/geo/cities?limit=5&offset=0&namePrefix" + random_city;
+    cityURL = "https://wft-geo-db.p.mashape.com/v1/geo/cities?limit=5&offset=0&namePrefix=" + random_city;
     return getParam_rapid(cityURL)
   })
   .then(res => {
