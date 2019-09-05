@@ -157,51 +157,7 @@ function search(){
       }
     }
     return getParam(weatherURL[5]);
-  })   
-  .then(res => {
-    // console.log(res)
-    for(var i=0;i<res.list.length;i++){
-      weather[i] = res.list[i].weather[0].main;
-      if(weather[i]=="Rain"){
-        city[j] = res.list[i].name;
-        j++;
-      }
-    }
-    return getParam(weatherURL[6]);
-  }) 
-  .then(res => {
-    // console.log(res)
-    for(var i=0;i<res.list.length;i++){
-      weather[i] = res.list[i].weather[0].main;
-      if(weather[i]=="Rain"){
-        city[j] = res.list[i].name;
-        j++;
-      }
-    }
-    return getParam(weatherURL[7]);
-  }) 
-  .then(res => {
-    // console.log(res)
-    for(var i=0;i<res.list.length;i++){
-      weather[i] = res.list[i].weather[0].main;
-      if(weather[i]=="Rain"){
-        city[j] = res.list[i].name;
-        j++;
-      }
-    }
-    return getParam(weatherURL[8]);
-  })
-  .then(res => {
-    // console.log(res)
-    for(var i=0;i<res.list.length;i++){
-      weather[i] = res.list[i].weather[0].main;
-      if(weather[i]=="Rain"){
-        city[j] = res.list[i].name;
-        j++;
-      }
-    }
-    return getParam(weatherURL[9]);
-  })   
+  })      
   .then(res => {
     // console.log(res)
     for(var i=0;i<res.list.length;i++){
