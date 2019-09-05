@@ -83,7 +83,7 @@ function search(){
     console.log(random_city)
     var html = '<span>' + random_city + '</span>'
     document.getElementById("info").innerHTML = html;
-    cityURL = "https://wft-geo-db.p.mashape.com/v1/geo/cities?limit=5&offset=0&namePrefix="+ random_city;
+    cityURL = "https://wft-geo-db.p.mashape.com/v1/geo/cities?limit=5&offset=0&namePrefix="+ random_city + "&apikey=814e9685dfmsh2f877b6c5f6d685p147c1cjsn947a00";
     return getParam(cityURL)
   })
   .then(res => {
