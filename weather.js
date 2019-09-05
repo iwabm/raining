@@ -115,7 +115,7 @@ function search(){
     return getParam(weatherURL[1]);
   })
   .then(res => {
-    // console.log(res)
+     console.log(res)
     for(var i=0;i<res.list.length;i++){
       weather[i] = res.list[i].weather[0].main;
       if(weather[i]=="Rain"){
@@ -170,7 +170,7 @@ function search(){
     return getParam(weatherURL[6]);
   }) 
   .then(res => {
-    // console.log(res)
+     console.log(res)
     for(var i=0;i<res.list.length;i++){
       weather[i] = res.list[i].weather[0].main;
       if(weather[i]=="Rain"){
