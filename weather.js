@@ -168,7 +168,7 @@ function search(){
       }
     }
     return getParam(weatherURL[6]);
-  }) 
+  })
   /*
   .then(res => {
      //console.log(res)
