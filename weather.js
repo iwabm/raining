@@ -12,8 +12,8 @@ zone[4] = '-90,35,-85,40,10';
 zone[5] = '135,35,140,40,10';
 zone[6] = '10,60,15,65,10';
 zone[7] = '-105,25,-100,30,10';
-zone[8] = '15,20,20,25,10';
-zone[9] = '105,10,110,15,10';
+zone[8] = '105,10,110,15,10';
+zone[9] = '15,20,20,25,10';
 var weatherURL = [];
 for(var i=0;i<=9;i++){
   weatherURL[i] = 'https://api.openweathermap.org/data/2.5/box/city?bbox=' + zone[i] + '&appid=f6748bf5cbca6df7965ee552869cc300';
