@@ -10,9 +10,9 @@ zone[2] = '90,30,95,35,10';
 zone[3] = '-75,0,-70,5,10';
 zone[4] = '-90,35,-85,40,10';
 zone[5] = '135,35,140,40,10';
-zone[6] = '10,60,15,65,10'; //'15,15,20,20,10';
+zone[6] = '10,60,15,65,10';
 zone[7] = '-105,25,-100,30,10';
-zone[8] = '10,60,15,65,10';
+zone[8] = '15,20,20,25,10';
 zone[9] = '105,10,110,15,10';
 var weatherURL = [];
 for(var i=0;i<=9;i++){
@@ -203,7 +203,7 @@ function search(){
     return getParam(weatherURL[9]);
   })
   .then(res => {
-    console.log(res)
+    //console.log(res)
     for(var i=0;i<res.list.length;i++){
       weather[i] = res.list[i].weather[0].main;
       if(weather[i]=="Rain"){
