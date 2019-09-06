@@ -158,7 +158,6 @@ function search(){
     }
     return getParam(weatherURL[5]);
   })
-  /*
   .then(res => {
     // console.log(res)
     for(var i=0;i<res.list.length;i++){
@@ -170,6 +169,7 @@ function search(){
     }
     return getParam(weatherURL[6]);
   }) 
+  /*
   .then(res => {
      //console.log(res)
     for(var i=0;i<res.list.length;i++){
